@@ -1,3 +1,4 @@
+<!-- AUTOMATION VALIDATION: 2026-04-23 - automation of development confirmed for this repo -->
 # National Firefighter Registry (NFR) Module
 
 **Last Updated:** February 6, 2026
