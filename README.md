@@ -1,6 +1,6 @@
 # National Firefighter Registry (NFR) Module
 
-Standalone Drupal module repo for National Firefighter Registry workflows, data collection, integrations, and analysis tooling.
+**Last Updated:** February 6, 2026
 
 ## ⚠️ CRITICAL: Data Preservation Warning
 
