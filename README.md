@@ -2,6 +2,13 @@
 
 Standalone Drupal module repo for National Firefighter Registry workflows, data collection, integrations, and analysis tooling.
 
+## Repository reality
+
+- **Tracked files in this repo:** 88
+- **Tracked markdown/docs:** 11
+- **Primary markdown surface:** `ARCHITECTURE.md`, `DRUPAL11_COMPLIANCE.md`, `INSTALLATION.md`, `NFR_MODULE_COMPLETION_SUMMARY.md`, `QUESTIONNAIRE_SECTIONS_IMPLEMENTATION.md`, `README.md`, `TEST_USER_CREDENTIALS.md`, `documents/BUSINESS_REQUIREMENTS.md`, and 3 more markdown files
+- **Documentation cleanup scope:** authoritative markdown files only; code and runtime behavior remain unchanged in this pass
+
 ## ⚠️ CRITICAL: Data Preservation Warning
 
 **DO NOT UNINSTALL THIS MODULE** without backing up the database first. Drupal automatically drops all tables defined in hook_schema() when a module is uninstalled, which will **permanently delete all collected data**, including:
@@ -38,9 +45,11 @@ drush en nfr -y
 drush sqlc < nfr-backup-YYYYMMDD.sql
 ```
 
+
 ## Overview
 
 The National Firefighter Registry (NFR) module is a CDC cancer surveillance and health tracking system for firefighters. This module supports the collection, management, and analysis of cancer incidence data among firefighters nationwide.
+
 
 ## Key Features
 
@@ -82,6 +91,7 @@ The National Firefighter Registry (NFR) module is a CDC cancer surveillance and 
 - State registry linkage rates
 - Public-facing data dashboard
 - De-identified data export capabilities
+
 
 ## Database Schema
 
@@ -153,6 +163,7 @@ The following tables are maintained for backward compatibility but will be remov
 - `nfr_cancer_data` - Replaced by questionnaire cancer history section
 - `nfr_longitudinal_data` - Replaced by nfr_follow_up_surveys
 
+
 ## Services
 
 ### NERISIntegration Service
@@ -167,6 +178,7 @@ The following tables are maintained for backward compatibility but will be remov
 ### DataExport Service
 - `exportSummaryStatistics()`: Generate summary statistics for dashboards
 - `exportToCSV($type, $filters)`: Export de-identified data to CSV
+
 
 ## Permissions
 
@@ -186,6 +198,7 @@ The following tables are maintained for backward compatibility but will be remov
 - **Export NFR Data**: Export registry data for analysis (restricted)
 - **Manage State Registry Linkages**: Configure state registry integrations (restricted)
 - **View NFR Reports**: Access research reports and analytics
+
 
 ## Routes & Pages
 
@@ -222,6 +235,7 @@ The following tables are maintained for backward compatibility but will be remov
   - Supports individual route testing and batch "Run All Tests" functionality
   - **As requirements are validated, additional test cases will be added to this page**
 
+
 ## Configuration
 
 Access module settings at `/admin/config/nfr/settings`
@@ -245,6 +259,7 @@ Access module settings at `/admin/config/nfr/settings`
 - Public dashboard visibility
 - Data anonymization options
 - Export format preferences
+
 
 ## Development
 
@@ -341,6 +356,7 @@ nfr/
 └── DRUPAL11_COMPLIANCE.md
 ```
 
+
 ## Frontend Architecture
 
 The NFR module follows Forseti's centralized theming patterns:
@@ -350,6 +366,7 @@ The NFR module follows Forseti's centralized theming patterns:
 - **Theme Integration**: All libraries depend on `forseti/style` for consistent theming
 - **No Inline Markup**: Controllers return structured render arrays, templates handle presentation
 - **Assets**: Defined in `nfr.libraries.yml` with proper dependencies
+
 
 ## Documentation
 
@@ -376,10 +393,18 @@ Visit `/nfr/documentation` for interactive access to all project documentation i
 - **Code Standards**: See [DRUPAL11_COMPLIANCE.md](DRUPAL11_COMPLIANCE.md) for compliance details
 - **Full Documentation**: Visit `/nfr/documentation` on your site
 
+
 ## Version
 
 1.0.0
 
+
 ## License
 
 Proprietary
+
+## Documentation hygiene result
+
+- authoritative documentation file reviewed: `README.md`
+- stale status Markdown files detected: none
+- stale top-level status/phase metadata removed where it no longer reflected current repository reality
